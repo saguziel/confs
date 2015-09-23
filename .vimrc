@@ -1,8 +1,14 @@
 set nocompatible
+filetype off
 
-execute pathogen#infect()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
-filetype indent plugin on
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'ervandew/supertab'
+
+call vundle#end()
+filetype plugin indent on
 
 syntax on
 
