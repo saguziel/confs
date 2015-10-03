@@ -15,79 +15,67 @@ Plugin 'scrooloose/syntastic'
 Plugin 'kien/rainbow_parentheses.vim'
 Plugin 'Raimondi/delimitMate'
 
-Plugin 'michalbachowski/vim-wombat256mod'
 Plugin 'nanotech/jellybeans.vim'
 Plugin 'bling/vim-airline'
 
 call vundle#end()
 filetype plugin indent on
 
+set encoding=utf-8
 syntax on
 
+" set theme stuff
 let g:indentLine_color_term = 234
-
 set t_Co=256
 color jellybeans
 
+" hide status bar bottom
 set laststatus=0
 set noshowmode
 set noru
 
+" enable airline
 let g:airline#extensions#tabline#enabled = 1
 
-"map <Leader>r RainbowParenthesesToggle
+" leader maps
+let mapleader="\<Space>"
+nnoremap <Leader>r :RainbowParenthesesToggle<CR>
+nnoremap <Leader>n :nohlsearch<Bar>:echo<CR>
 
+" generic stuff
 set hlsearch
 set nomodeline
-
 set smartcase
 set ignorecase
-
 set backspace=indent,eol,start
-
 set autoindent
 set nostartofline
-
 set ruler
-
 set laststatus=2
-
 set confirm
-
 set visualbell
-
 set t_vb=
-
 set mouse=a
-
 set cmdheight=2
-
 set number
-
 set notimeout ttimeout ttimeoutlen=200
-
 set pastetoggle=<F11>
-
 set shiftwidth=4
 set softtabstop=4
 set expandtab
-
-set shiftwidth=4
 set tabstop=4
 
-
+" folding
 set foldmethod=indent
 set foldnestmax=2
 set foldlevelstart=4
 set foldenable
 
-nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
-
+" autoread
 set cursorline
 set autoread
 
-let mapleader=","
-
+" make quitting easier
 command! W w
 command! Q q
 command! -bang Q quit<bang>
