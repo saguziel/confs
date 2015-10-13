@@ -55,6 +55,7 @@ source $ZSH/oh-my-zsh.sh
 alias py="ipython"
 alias rm='echo "This is not the command you are looking for."; false'
 alias tr='trash-put'
+alias vi='vim'
 
 eval "$(fasd --init auto)"
 

@@ -3,7 +3,8 @@ filetype off
 
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-
+" git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+" :PluginInstall
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'ervandew/supertab'
 Plugin 'tmux-plugins/vim-tmux'
@@ -36,6 +37,9 @@ set noru
 
 " enable airline
 let g:airline#extensions#tabline#enabled = 1
+
+" plugin setting
+let delimitMate_expand_cr = 1
 
 " leader maps
 let mapleader="\<Space>"
